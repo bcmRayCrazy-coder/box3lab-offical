@@ -14,12 +14,17 @@ function Card(props: {
   introduction: string
 }) {
   return (
-    <div className="border-red-100/5 border-2 rounded-lg m-8 mt-16 transition-colors hover:border-red-500/60 p-4 shadow-sm shadow-red-300/5 flex-auto card-sm md:card">
+    <div className="border-red-100/5 border-2 rounded-lg m-8 mt-16 transition-colors hover:border-red-500/60 hover:bg-gray-800/20 p-4 shadow-sm shadow-red-300/5 flex-auto card-sm md:card">
       <div className="flex flex-row justify-start items-center">
-        <IconContext.Provider value={{ size: '2rem' }}>{props.icon}</IconContext.Provider>
+        <div className="relative">
+          <IconContext.Provider value={{ size: '2rem' }}>
+            {props.icon}
+            <p className="left-0 top-0 absolute h-full w-full blur-xl rounded bg-green-600 -z-10"></p>
+          </IconContext.Provider>
+        </div>
         <h3 className="ml-2 text-2xl">{props.title}</h3>
       </div>
-      <p className="before:absolute before:h-8 before:w-12 before:-translate-x-1/6 before:rounded-full before:blur-2xl before:content-[''] before:bg-green-400 mt-2 text-green-400">{props.subTitle}</p>
+      <p className="mt-2 text-green-400">{props.subTitle}</p>
       <div className="break-words mt-2 text-white/80">
         <p>{props.introduction}</p>
       </div>
@@ -46,10 +51,35 @@ export default function Home() {
           <h2 className="mb-0 text-md md:text-xl text-red-100/45">为创作者所有, 由创作者共建, 因创作者而生</h2>
         </div>
       </div>
+
       <div className="flex flex-col md:flex-row justify-center mb-16">
         <Card icon={<FaHandHoldingHeart />} title="所有" subTitle="For Community" introduction="实验室供创作者使用, 提供许多创作工具。" />
         <Card icon={<TbAlignBoxLeftTopFilled />} title="共建" subTitle="By Community" introduction="创作者们在这里共同发展, 共同建设。" />
         <Card icon={<FaLeaf />} title="生机" subTitle="Of Communnity" introduction="我们相信, 创作者定会带给实验室繁荣" />
+      </div>
+
+      <div className="m-16 p-16 pb-0 rounded-lg bg-gray-800/20 flex flex-col lg:flex-row justify-between overflow-hidden border-red-100/5 border-2 transition-colors hover:border-yellow-500/60 hover:bg-gray-800/20">
+        <div className="w-full text-center lg:text-left flex flex-col justify-between">
+          <div>
+            <h3 className="text-4xl">Chat 吉 PT</h3>
+            <p className="mt-4 lg:mt-16 mb-16 text-white/80">Chat 吉 PT, 懂你岛 API 的 AI 睿智吉</p>
+          </div>
+          <a
+            href="https://ai.box3lab.com/"
+            className="group cjpt-btn mb-32 p-4 bg-orange-600 w-fit rounded-lg shadow-xl hover:pl-16">
+            <p
+              className="text-white group-hover:text-right">
+              去体验 -&gt;
+            </p>
+          </a>
+        </div>
+        <Image
+          className="rounded-xl lg:translate-x-20 shadow-xl shadow-gray-800"
+          src="/ailab_demo.png"
+          alt="Chat吉PT演示"
+          width={546}
+          height={1221}
+        />
       </div>
 
       <div className="m-32 flex flex-row justify-center">
