@@ -48,7 +48,7 @@ export default function Home() {
           />
         </div>
         <div className="mb-16 flex text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left justify-center">
-          <h2 className="mb-0 text-md md:text-xl text-red-100/45">为创作者所有, 由创作者共建, 因创作者而生</h2>
+          <h2 className="mb-0 text-md md:text-xl text-red-100/45">为创作者所有，由创作者共建，因创作者而生</h2>
         </div>
       </div>
 
@@ -62,24 +62,39 @@ export default function Home() {
         <div className="w-full text-center lg:text-left flex flex-col justify-between">
           <div>
             <h3 className="text-4xl">Chat 吉 PT</h3>
-            <p className="mt-4 lg:mt-16 mb-16 text-white/80">Chat 吉 PT, 懂你岛 API 的 AI 睿智吉</p>
+            <p className="mt-4 lg:mt-16 mb-16 text-white/80">Chat 吉 PT，懂神岛API的AI睿智吉，为您奉上一份智慧的代码。</p>
           </div>
-          <a
-            href="https://ai.box3lab.com/"
-            className="group cjpt-btn mb-32 p-4 bg-orange-600 w-fit rounded-lg shadow-xl hover:pl-16">
-            <p
-              className="text-white group-hover:text-right">
-              去体验 -&gt;
-            </p>
-          </a>
+          <div className="mb-4 lg:mb-32 flex flex-col justify-center lg:justify-normal">
+            <p className="mb-4 text-white/70">QQ交流群: 289284864</p>
+            <a
+              href="https://ai.box3lab.com/"
+              className="group cjpt-btn p-4 bg-orange-600 w-fit rounded-lg shadow-xl hover:pl-16 m-auto lg:m-0 hover:bg-white border-2 border-orange-600">
+              <p
+                className="text-white group-hover:text-right group-hover:text-orange-600">
+                去体验 -&gt;
+              </p>
+            </a>
+          </div>
         </div>
         <Image
-          className="rounded-xl lg:translate-x-20 shadow-xl shadow-gray-800"
+          className="rounded-xl lg:translate-x-20 shadow-xl shadow-gray-800 border-2 border-gray-800/20 transition-colors hover:border-red-100/20"
           src="/ailab_demo.png"
           alt="Chat吉PT演示"
           width={546}
           height={1221}
         />
+      </div>
+
+      <div className="com-bg m-16 p-16 relative overflow-hidden rounded-lg border-2 border-transparent hover:border-x-teal-500/80 after:absolute after:top-0 after:left-0 after:w-full after:h-full after:content-[''] after:-z-10 after:blur-sm hover:after:scale-105">
+        <div>
+          <h3 className="text-4xl flex flex-row items-center">
+            <p className="rounded-l-full rounded-r-full p-4 bg-orange-500 hidden sm:flex">活动</p>
+            <p className="ml-2 font-bold">创作者帮扶</p>
+            <p className="ml-2 text-2xl flex sm:hidden">活动</p>
+          </h3>
+          <p className="mt-4 lg:mt-16 mb-16 text-white/80">创作者相互扶持，互帮互助，满足您对找合作者，宣传，和商业化方面的需求。</p>
+          <p className="mb-4 text-white/70">加入QQ群联系皮皮喵: 289284864</p>
+        </div>
       </div>
 
       <div className="m-32 flex flex-row justify-center">
