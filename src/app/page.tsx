@@ -85,7 +85,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="com-bg m-16 p-16 relative overflow-hidden rounded-lg border-2 border-transparent hover:border-x-teal-500/80 after:absolute after:top-0 after:left-0 after:w-full after:h-full after:content-[''] after:-z-10 after:blur-sm hover:after:scale-105">
+      {/* <div className="com-bg m-16 p-16 relative overflow-hidden rounded-lg border-2 border-transparent hover:border-x-teal-500/80 after:absolute after:top-0 after:left-0 after:w-full after:h-full after:content-[''] after:-z-10 after:blur-sm hover:after:scale-105">
         <div>
           <h3 className="text-4xl flex flex-row items-center">
             <p className="rounded-l-full rounded-r-full p-4 bg-orange-500 hidden sm:flex">活动</p>
@@ -95,7 +95,7 @@ export default function Home() {
           <p className="mt-4 lg:mt-16 mb-16 text-white/80">创作者相互扶持，互帮互助，满足您对找合作者，宣传，和商业化方面的需求。</p>
           <p className="mb-4 text-white/70">加入QQ群联系皮皮喵: 289284864</p>
         </div>
-      </div>
+      </div> */}
 
       <div className="m-32 flex flex-row justify-center">
         <p className="text-md text-red-100/45">&copy; {(new Date()).getFullYear()} 神岛实验室</p>
